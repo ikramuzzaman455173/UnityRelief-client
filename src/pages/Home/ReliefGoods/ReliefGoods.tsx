@@ -109,7 +109,7 @@ const ReliefGoods = () => {
       </div>
 
       {/* ====view more button start===== */}
-      <div className="text-center my-10">
+      <div className="text-center my-14">
         <CustomButton className="bg-custom-gray dark:font-Quicksand">
           View All RelIeF Goods
         </CustomButton>
