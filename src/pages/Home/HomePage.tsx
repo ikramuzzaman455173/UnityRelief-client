@@ -1,7 +1,9 @@
+import HeroSection from "@/components/SharedComponents/HeroSection"
+
 const HomePage= () => {
   return (
     <>
-      <h1>HomePage</h1>
+      <HeroSection/>
     </>
   )
 }

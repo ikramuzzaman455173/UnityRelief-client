@@ -86,6 +86,10 @@
   }
 }
 
+body,html{
+  overflow-x: hidden;
+}
+
 /* *<===repeaeted css style tailwind css layer apply===>* */
 
 /* ======= navabar style  ======= */
