@@ -1,11 +1,13 @@
-import HeroSection from "@/components/SharedComponents/HeroSection"
+import HeroSection from "@/pages/Home/Header/HeroSection";
+import ReliefGoods from "./ReliefGoods/ReliefGoods";
 
-const HomePage= () => {
+const HomePage = () => {
   return (
     <>
-      <HeroSection/>
+      <HeroSection />
+      <ReliefGoods/>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

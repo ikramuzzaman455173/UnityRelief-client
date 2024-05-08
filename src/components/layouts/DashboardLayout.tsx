@@ -14,7 +14,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
   return (
     <div>
-      <header className="bg-gray-800 text-white p-4">
+      <header className="bg-gray-800 text-custom-white p-4">
         Dashboard Layout Header
       </header>
       <div className="flex">
@@ -32,7 +32,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
         {/* Button to toggle sidebar on medium screens */}
         <button
-          className="md:hidden fixed top-4 right-4 bg-gray-800 text-white p-2 rounded"
+          className="md:hidden fixed top-4 right-4 bg-gray-800 text-custom-white p-2 rounded"
           onClick={toggleSidebar}
         >
           {showSidebar ? "Hide" : "Show"} Sidebar

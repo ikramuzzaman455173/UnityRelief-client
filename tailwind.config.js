@@ -8,6 +8,7 @@ export const content = [
 ];
 export const prefix = "";
 export const theme = {
+  darkMode: 'class',
   container: {
     center: true,
     padding: "2rem",
@@ -51,9 +52,24 @@ export const theme = {
         DEFAULT: "hsl(var(--card))",
         foreground: "hsl(var(--card-foreground))",
       },
+      custom: {
+        dark: "#0f1d34",
+        light: "#ffffff",
+        white: "#ffffff",
+        main: '#0ea5e9',
+        mainDark: '#0284c7',
+        root: "#6366f1",
+        red: "#f43f5e",
+        gray: "#334155",
+        gray500: "#64748b",
+        blackOne: "#1e293b",
+        blackTwo: "#0f172a",
+        "gray-300":"#d1d5db"
+      }
     },
     fontFamily: {
-      'Quicksand': ["Quicksand", "sans-serif"]
+      'Quicksand': ["Quicksand", "sans-serif"],
+      'source-code-pro':["Source Code Pro", "monospace"]
     },
     borderRadius: {
       lg: "var(--radius)",

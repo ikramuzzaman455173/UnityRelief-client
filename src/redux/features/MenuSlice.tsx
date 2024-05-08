@@ -6,13 +6,13 @@ const initialState = {
 };
 
 const navBarSlice = createSlice({
-  name: 'navBar',
+  name: 'menu',
   initialState,
   reducers: {
     toggleDropDown: (state) => {
       state.dropDownState = !state.dropDownState;
-    },
-  },
+    }
+  }
 });
 
 export const { toggleDropDown } = navBarSlice.actions;

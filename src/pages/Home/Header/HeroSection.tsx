@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
 import AOS from "aos";
-import HeroImg1 from "../../assets/hero-section-image/hero-img-1.jpg";
-import HeroImg2 from "../../assets/hero-section-image/hero-img-2.jpg";
-import HeroImg3 from "../../assets/hero-section-image/hero-img-3.jpg";
-import HeroImg4 from "../../assets/hero-section-image/hero-img-4.jpg";
-import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
 import { FaDonate } from "react-icons/fa";
+import HeroImg1 from "/src/assets/hero-section-image/hero-img-1.jpg";
+import HeroImg2 from "/src/assets/hero-section-image/hero-img-2.jpg";
+import HeroImg3 from "/src/assets/hero-section-image/hero-img-3.jpg";
+import HeroImg4 from "/src/assets/hero-section-image/hero-img-4.jpg";
+import CustomButton from "@/components/SharedComponents/CustomButton";
 
 const HeroSection = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -24,34 +24,26 @@ const HeroSection = () => {
   const texts = ["Features", "Hero"];
 
   return (
-    <div className="px-4 lg:py-0 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 lg:py-0 pb-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 mt-24">
       <div className="grid gap-4 lg:grid-cols-2">
         <div
           className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg"
           data-aos="fade-right" // Add AOS animation here
         >
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
-            {/* Icons */}
-          </div>
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 md:text-5xl sm:text-4xl text-2xl font-bold tracking-tight text-gray-900 sm:leading-none animate-pulse font-Quicksand">
+            <h2 className="max-w-lg mb-6 md:text-5xl sm:text-4xl text-2xl font-bold tracking-tight text-custom-gray dark:text-custom-white sm:leading-none animate-pulse font-Quicksand dark:font-playfair-display">
               Empower
               <span className="text-sky-500 pl-3">{texts[textIndex]}</span>
               <br /> <span className="relative top-4">change lives today</span>
             </h2>
-            <p className="text-base text-gray-700 md:text-lg pt-3">
+            <p className="text-base text-gray-700 dark:text-custom-white md:text-lg pt-3">
               Shape a brighter future and building a better world with our
               impactful NGO initiatives.
             </p>
           </div>
           {/* ====donat button start ===== */}
           <div data-aos="zoom-in">
-            <Button className="bg-indigo-400 active:bg-indigo-600 hover:bg-indigo-600 rounded transition duration-300 active:scale-105 transform overflow-hidden">
-              Donate Now{" "}
-              <span className="pl-2 text-xl">
-                <FaDonate />
-              </span>
-            </Button>
+            <CustomButton icon={FaDonate}>Donate Now</CustomButton>
           </div>
           {/* ====donat button end ===== */}
         </div>

@@ -11,7 +11,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <div className="min-h-screen flex flex-col">
         <NavBar />
       <main className="flex-1 md:p-4 p-0">{children}</main>
-      <footer className="bg-gray-800 text-white p-4">Main Layout Footer</footer>
+      <footer className="bg-gray-800 text-custom-white p-4">
+        Main Layout Footer
+      </footer>
     </div>
   );
 };

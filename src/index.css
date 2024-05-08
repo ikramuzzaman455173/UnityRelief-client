@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 * {
   padding: 0;
@@ -12,7 +12,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Dark Mode */
+[data-theme="dark"] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -94,12 +100,12 @@ body,html{
 
 /* ======= navabar style  ======= */
 .nav-li-style-pc{
-  @apply  flex cursor-pointer flex-col font-Quicksand font-bold tracking-wider text-[14px]
+  @apply  flex cursor-pointer flex-col font-Quicksand dark:font-source-code-pro font-bold tracking-wider text-[14px] text-custom-gray500 dark:text-custom-white
 }
 .nav-li-span-style-pc{
   @apply mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full
 }
 .nav-li-style-mobile{
-  @apply cursor-pointer px-6 py-2 text-white hover:bg-sky-600 font-Quicksand font-bold tracking-wider
+  @apply cursor-pointer px-6 py-2 text-custom-gray500 dark:text-custom-white hover:bg-sky-600 hover:text-custom-white font-Quicksand dark:font-source-code-pro font-bold tracking-wider
 }
 /* ======= End navabar style  ======= */
