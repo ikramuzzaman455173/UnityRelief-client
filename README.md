@@ -14,7 +14,8 @@
 - [Running the Project](#running-the-project)
 - [Accessing the Project](#accessing-the-project)
 - [Repo Quick Start Command](#repo-quick-start-command)
-- [Highly Recommended](#highly-recommended)
+
+> Here's a basic setup for a React TypeScript project with Redux state management and Tailwind CSS for styling. This template provides a starting point for either a home layout or a dashboard layout :)
 
 ### Prerequisites
 
@@ -28,7 +29,7 @@
 - Run the following command to clone the repository:
 
 ```shell
-git clone https://github.com/ikramuzzaman455173/react-typescript-tailwind-redux-starter-template.git
+git clone https://github.com/ikramuzzaman455173/react-typescript-tailwind-redux-starter-layout-setup-template.git
 ```
 
 This will download the project to your local machine.
@@ -40,7 +41,7 @@ This will download the project to your local machine.
 - Change your working directory to the cloned project's directory:
 
 ```shell
-cd react-typescript-tailwind-redux-starter-template
+cd react-typescript-tailwind-redux-starter-layout-setup-template
 ```
 
 - Use npm to install the project's dependencies, which are typically listed in a `package.json` file:
@@ -72,31 +73,7 @@ npm run dev
 To quickly clone, install dependencies, open the project in your code editor, and start the development server, you can use the following command:
 
 ```bash
-git clone https://github.com/ikramuzzaman455173/react-typescript-tailwind-redux-starter-template.git && cd react-typescript-tailwind-redux-starter-template && npm install && code . && npm run dev
-```
-
-### Highly Recommended
-
-> This project when install & open first show one simaple & amazing counter. But you are open layout part copy & paste this code our main.tsx file or app component comment out and other comment commonent code uncomment.
-
-```tsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import { Provider } from "react-redux";
-import { store } from "./redux/store.ts";
-import { RouterProvider } from "react-router-dom";
-import router from "./routes/Routes.tsx";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-      {/* <App /> */}
-    </Provider>
-  </React.StrictMode>
-);
+git clone https://github.com/ikramuzzaman455173/react-typescript-tailwind-redux-starter-layout-setup-template.git && cd react-typescript-tailwind-redux-starter-layout-setup-template && npm install && code . && npm run dev
 ```
 
 **[Go to top ⬆️](#top)**
