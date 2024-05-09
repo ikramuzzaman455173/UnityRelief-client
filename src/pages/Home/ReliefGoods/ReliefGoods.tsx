@@ -6,57 +6,57 @@ const ReliefGoods = () => {
   const reliefGoodsPosts = [
     {
       id: 1,
-      image: "https://source.unsplash.com/600x400/?food",
-      title: "Emergency Food Supplies",
-      category: "Food Supplies",
-      amount: 10000, // Amount in USD
+      image: "https://i.ibb.co/s5CL0t1/cause-1.jpg",
+      title: "Plant Tree, Save Earth & Lives Secure the Future",
+      category: "Environment",
+      amount: 500, // Amount in USD
       details:
-        "Provides essential food items such as rice, beans, canned goods, and cooking oil to families affected by the crisis.",
+        "Help us plant trees to combat climate change and ensure a sustainable future. Location: Various locations worldwide. Urgency: Medium.",
     },
     {
       id: 2,
-      image: "https://source.unsplash.com/600x400/?shelter",
-      title: "Shelter Kits Distribution",
-      category: "Shelter Kits",
-      amount: 15000, // Amount in USD
+      image: "https://i.ibb.co/dgjKNfs/cause-2.jpg",
+      title: "Emergency Response and School Food ",
+      category: "Volunteering",
+      amount: 300, // Amount in USD
       details:
-        "Distributes shelter kits containing tents, blankets, and sleeping mats to displaced families for temporary shelter.",
+        "Provide emergency response support and food for schools in crisis-affected areas. Location: Disaster-prone regions. Urgency: High.",
     },
     {
       id: 3,
-      image: "https://source.unsplash.com/600x400/?clothing",
-      title: "Clothing Donation Drive",
-      category: "Clothing",
-      amount: 5000, // Amount in USD
+      image: "https://i.ibb.co/mtF1hs7/cause-3.jpg",
+      title: "People that Need Clean Drinking Water",
+      category: "Water",
+      amount: 500, // Amount in USD
       details:
-        "Collects and distributes clothing items such as shirts, pants, jackets, and shoes to individuals in need of clothing assistance.",
+        "Help communities in need access clean drinking water by supporting water purification projects. Location: Impoverished areas lacking clean water sources. Urgency: High.",
     },
     {
       id: 4,
-      image: "https://source.unsplash.com/600x400/?medical",
-      title: "Medical Supplies Assistance",
-      category: "Medical Supplies",
-      amount: 8000, // Amount in USD
+      image: "https://i.ibb.co/s2ZwDSm/cause-4.jpg",
+      title: "Let’s Help Children Build a Happy Future",
+      category: "Education",
+      amount: 800, // Amount in USD
       details:
-        "Provides medical supplies including bandages, antibiotics, and first aid kits to medical facilities treating patients affected by the crisis.",
+        "Support educational initiatives to empower children and give them opportunities for a brighter future. Location: Underprivileged communities. Urgency: Medium.",
     },
     {
       id: 5,
-      image: "https://source.unsplash.com/600x400/?hygiene",
-      title: "Hygiene Kits Distribution",
-      category: "Hygiene Kits",
-      amount: 6000, // Amount in USD
+      image: "https://i.ibb.co/W3sNTSH/cause-5.jpg",
+      title: "Little Help Can Make a Big Difference",
+      category: "Food",
+      amount: 600, // Amount in USD
       details:
-        "Distributes hygiene kits containing soap, toothpaste, toothbrushes, and sanitary pads to promote cleanliness and prevent disease transmission.",
+        "Provide essential food supplies to families facing food insecurity. Location: Low-income neighborhoods. Urgency: High.",
     },
     {
       id: 6,
-      image: "https://source.unsplash.com/600x400/?blanket",
-      title: "Blanket Distribution Campaign",
-      category: "Bedding & Blankets",
+      image: "https://i.ibb.co/pbfg0vq/cause-6.jpg",
+      title: "Online Donation in the Modern World",
+      category: "Medicine",
       amount: 7500, // Amount in USD
       details:
-        "Conducts a blanket distribution campaign to provide warm bedding materials to individuals and families facing cold weather conditions.",
+        "Support online medical services to provide healthcare access to underserved communities. Location: Remote or isolated areas. Urgency: Medium.",
     },
   ];
 
@@ -120,3 +120,4 @@ const ReliefGoods = () => {
 };
 
 export default ReliefGoods;
+
