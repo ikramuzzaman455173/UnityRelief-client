@@ -2,6 +2,7 @@ import HeroSection from "@/pages/Home/Header/HeroSection";
 import ReliefGoods from "./ReliefGoods/ReliefGoods";
 import Testimonial from "./Testimonial/Testimonial";
 import CarouselGallery from "./GalleryCarousel/CarouselGallery";
+import AboutUs from "./WhoWeAre/AboutUs";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <ReliefGoods />
       <Testimonial />
       <CarouselGallery />
+      <AboutUs/>
     </>
   );
 };
