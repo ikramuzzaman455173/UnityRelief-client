@@ -2,7 +2,7 @@ import { toggleDropDown } from "@/redux/features/MenuSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { useEffect, useState } from "react";
 import { MdClose, MdLogin, MdLogout, MdMenu } from "react-icons/md";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 const NavBar = () => {
   const dropDownState = useAppSelector(
@@ -47,10 +47,10 @@ const NavBar = () => {
           All Relief Goods
           <span className="nav-li-span-style-pc"></span>
         </li>
-        <li className={`group nav-li-style-pc ${isActive("/dashboard")}`}>
+        <Link to="/dashboard" className={`group nav-li-style-pc ${isActive("/dashboard")}`}>
           Dashboard
           <span className="nav-li-span-style-pc"></span>
-        </li>
+        </Link>
 
         <li className="nav-li-style-pc">
           <button className="relative overflow-hidden rounded-md bg-custom-main text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center">

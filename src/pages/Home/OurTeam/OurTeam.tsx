@@ -1,5 +1,4 @@
 import DynamicTitle from "@/components/SharedComponents/DynamicTitle";
-import { profile } from "console";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const OurTeam = () => {
