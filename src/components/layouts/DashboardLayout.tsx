@@ -68,7 +68,7 @@ const DashboardLayout = () => {
       <div className="h-screen flex overflow-hidden">
         {/* Sidebar */}
         <div
-          className={`absolute bg-custom-light dark:bg-custom-dark text-custom-gray500 border shadow-md dark:text-custom-white w-56 min-h-screen overflow-y-auto transition-transform top-[62px] dark:border-0 dark:border-white dark:border-r ${
+          className={`absolute bg-custom-light dark:bg-custom-dark text-custom-gray500 border shadow-md dark:text-custom-white w-56 min-h-screen overflow-y-auto transition-transform top-[62px] z-[50] dark:border-0 dark:border-white dark:border-r ${
             sidebarOpen ? "" : "transform -translate-x-full"
           } ease-in-out duration-300`}
           id="sidebar"
@@ -83,7 +83,7 @@ const DashboardLayout = () => {
           onClick={closeSidebar}
         >
           {/* Navbar */}
-          <div className="bg-custom-light dark:bg-custom-dark dark:border-0 dark:border-white dark:border-b shadow border fixed w-full top-0 left-0 ">
+          <div className="bg-custom-light dark:bg-custom-dark dark:border-0 dark:border-white dark:border-b shadow border fixed w-full top-0 left-0 z-[99]">
             <div className="container mx-auto ">
               <div className="flex justify-between items-center py-4 px-2">
                 <Link to="/" className="flex items-center">
@@ -117,7 +117,7 @@ const DashboardLayout = () => {
             </div>
           </div>
           {/* Content Body */}
-          <div className="flex-1 overflow-auto p-4 relative top-20">
+          <div className="flex-1 p-4 relative top-20">
             {/* ====center of the content===== */}
             <div className="flex w-full h-screen justify-center">
               <Outlet />

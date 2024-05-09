@@ -39,24 +39,30 @@ const NavBar = () => {
         {/* ====comment===== */}
       </div>
       <ul className="hidden items-center justify-between gap-10 md:flex">
-        <li className={`group nav-li-style-pc ${isActive("/")}`}>
+        <Link to="/" className={`group nav-li-style-pc ${isActive("/")}`}>
           Home
           <span className="nav-li-span-style-pc"></span>
-        </li>
+        </Link>
         <li className={`group nav-li-style-pc ${isActive("/relief-goods")}`}>
           All Relief Goods
           <span className="nav-li-span-style-pc"></span>
         </li>
-        <Link to="/dashboard" className={`group nav-li-style-pc ${isActive("/dashboard")}`}>
+        <Link
+          to="/dashboard"
+          className={`group nav-li-style-pc ${isActive("/dashboard")}`}
+        >
           Dashboard
           <span className="nav-li-span-style-pc"></span>
         </Link>
 
         <li className="nav-li-style-pc">
-          <button className="relative overflow-hidden rounded-md bg-custom-main text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center">
+          <Link
+            to="/login"
+            className="relative overflow-hidden rounded-md bg-custom-main text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center"
+          >
             <MdLogin />
             <span className="pl-2 font-bold tracking-wider">Login</span>
-          </button>
+          </Link>
         </li>
 
         <li className="nav-li-style-pc">
@@ -73,14 +79,20 @@ const NavBar = () => {
         className="relative flex transition-transform md:hidden"
       >
         {dropDownState ? (
-          <MdClose size={24} className="cursor-pointer text-custom-dark dark:text-custom-white" />
+          <MdClose
+            size={24}
+            className="cursor-pointer text-custom-dark dark:text-custom-white"
+          />
         ) : (
-          <MdMenu size={24} className="cursor-pointer text-custom-dark dark:text-custom-white" />
+          <MdMenu
+            size={24}
+            className="cursor-pointer text-custom-dark dark:text-custom-white"
+          />
         )}
 
         {dropDownState && (
           <ul className="gap-2 bg-custom-light dark:bg-custom-dark absolute -right-2 top-16  dark:border-white border flex w-[250px] flex-col rounded text-base">
-            <li className={`nav-li-style-mobile ${isActive("/")}`}>Home</li>
+            <Link to="/" className={`nav-li-style-mobile ${isActive("/")}`}>Home</Link>
             <li className={`nav-li-style-mobile ${isActive("/relief-goods")}`}>
               All Relief Goods
             </li>
@@ -89,18 +101,25 @@ const NavBar = () => {
             </li>
 
             <li className="nav-li-style-mobile hover:bg-transparent">
-              <button onClick={(e)=>e.stopPropagation()} className="relative overflow-hidden rounded-md bg-custom-root text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center">
+              <Link
+                to="/login"
+                onClick={(e) => e.stopPropagation()}
+                className="relative overflow-hidden rounded-md bg-custom-root text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center"
+              >
                 <MdLogin />
                 <span className="pl-2 font-bold tracking-wider">Login</span>
-              </button>
+              </Link>
             </li>
 
             <li className="nav-li-style-mobile hover:bg-transparent">
-              <button onClick={(e)=>e.stopPropagation()} className="relative overflow-hidden rounded-md bg-custom-red text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center">
+              <button
+                onClick={(e) => e.stopPropagation()}
+                className="relative overflow-hidden rounded-md bg-custom-red text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center"
+              >
                 <MdLogout />
                 <span className="pl-2 font-bold tracking-wider ">Logout</span>
               </button>
-              <div className="my-4" onClick={(e)=>e.stopPropagation()}>
+              <div className="my-4" onClick={(e) => e.stopPropagation()}>
                 <ThemeToggle />
               </div>
             </li>
