@@ -9,7 +9,7 @@ const Sidebar = () => {
           <li className="mb-3">
             <Link
               to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-source-code-pro hover:text-custom-white hover:border hover:border-custom-main"
+              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
             >
               Home
             </Link>
@@ -17,7 +17,7 @@ const Sidebar = () => {
           <li className="mb-3">
             <Link
               to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-source-code-pro hover:text-custom-white hover:border hover:border-custom-main"
+              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
             >
               About
             </Link>
@@ -25,7 +25,7 @@ const Sidebar = () => {
           <li className="mb-3">
             <Link
               to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-source-code-pro hover:text-custom-white hover:border hover:border-custom-main"
+              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
             >
               Services
             </Link>
@@ -33,7 +33,7 @@ const Sidebar = () => {
           <li className="mb-3">
             <Link
               to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-source-code-pro hover:text-custom-white hover:border hover:border-custom-main"
+              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
             >
               Contact
             </Link>

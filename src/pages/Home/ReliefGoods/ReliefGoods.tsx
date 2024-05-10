@@ -1,6 +1,8 @@
 import CustomButton from "@/components/SharedComponents/CustomButton";
 import DynamicTitle from "@/components/SharedComponents/DynamicTitle";
-import { FaDonate } from "react-icons/fa";
+import Aos from "aos";
+import { useEffect } from "react";
+// import { FaDonate } from "react-icons/fa";
 
 const ReliefGoods = () => {
   const reliefGoodsPosts = [
@@ -59,7 +61,9 @@ const ReliefGoods = () => {
         "Support online medical services to provide healthcare access to underserved communities. Location: Remote or isolated areas. Urgency: Medium.",
     },
   ];
-
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="my-20 ">
       {/* ====heading info start===== */}
@@ -98,11 +102,13 @@ const ReliefGoods = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-4 justify-between items-center">
-              <CustomButton icon={FaDonate}>Donate Now</CustomButton>
-              <button className="rounded border border-custom-dark px-4 dark:border-custom-white text-custom-gray dark:text-custom-white dark:hover:text-custom-blackOne dark:hover:bg-custom-white  py-2  duration-300 hover:bg-custom-gray-300 transition active:scale-105 transform overflow-hidden font-Quicksand text-[12px] tracking-wider font-semibold">
+            <div>
+              <CustomButton
+                to={`/relief-goods/${post.id}`}
+                className="w-full dark:font-merriweather font-Quicksand tracking-wider "
+              >
                 View Details
-              </button>
+              </CustomButton>
             </div>
           </div>
         ))}
@@ -110,7 +116,10 @@ const ReliefGoods = () => {
 
       {/* ====view more button start===== */}
       <div className="text-center my-14">
-        <CustomButton className="bg-custom-gray dark:font-Quicksand">
+        <CustomButton
+          to="/relief-goods"
+          className="bg-custom-gray dark:font-Quicksand"
+        >
           View All RelIeF Goods
         </CustomButton>
       </div>
@@ -120,4 +129,3 @@ const ReliefGoods = () => {
 };
 
 export default ReliefGoods;
-

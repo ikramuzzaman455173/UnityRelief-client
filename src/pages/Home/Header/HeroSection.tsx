@@ -55,24 +55,24 @@ const HeroSection = () => {
         >
           <div className="flex flex-col items-end px-3">
             <img
-              className="object-cover mb-6 rounded shadow-lg md:h-[360px] md:w-[250px] hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7]"
+              className="object-cover mb-6 rounded shadow-lg md:h-[360px] md:w-[250px] hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7] border p-1 dark:border-custom-gray-300 dark:bg-custom-white"
               src={HeroImg1}
               alt="HeroImg1"
             />
             <img
-              className="object-cover md:h-[280px] md:w-[240px] rounded shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7]"
+              className="object-cover md:h-[280px] md:w-[240px] rounded shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7] border p-1 dark:border-custom-gray-300 dark:bg-custom-white"
               src={HeroImg2}
               alt="HeroImg2"
             />
           </div>
           <div className="px-3">
             <img
-              className="object-cover md:h-[290px] md:w-[240px] rounded shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7]"
+              className="object-cover md:h-[290px] md:w-[240px] rounded shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7] border p-1 dark:border-custom-gray-300 dark:bg-custom-white"
               src={HeroImg3}
               alt="HeroImg3"
             />
             <img
-              className="object-cover mb-6 rounded shadow-lg md:h-[280px] md:w-[240px] mt-7 hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7]"
+              className="object-cover mb-6 rounded shadow-lg md:h-[280px] md:w-[240px] mt-7 hover:scale-105 transition-transform duration-300 cursor-pointer hover:opacity-[.7] border p-1 dark:border-custom-gray-300 dark:bg-custom-white"
               src={HeroImg4}
               alt="HeroImg4"
             />

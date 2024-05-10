@@ -1,14 +1,17 @@
-import React from "react";
+import { useEffect } from "react";
+import AOS from 'aos';
 
 interface DynamicTitleProps {
   heading: string;
   title: string;
 }
-
 const DynamicTitle: React.FC<DynamicTitleProps> = ({
   heading = "",
   title = "",
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div
       className="text-center my-10"

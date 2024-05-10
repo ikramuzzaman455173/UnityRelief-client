@@ -1,9 +1,9 @@
 import {
   FaFacebook,
-  FaTwitter,
-  FaInstagram,
   FaGooglePlus,
+  FaInstagram,
   FaPhone,
+  FaTwitter,
 } from "react-icons/fa";
 import { FaMapLocation, FaMessage } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -105,7 +105,7 @@ const Footer = () => {
                     <div className="bg-custom-main p-3 text-xl rounded-full">
                       <FaPhone />
                     </div>
-                    <div className="text-lg font-medium tracking-wide font-source-code-pro text-custom-gray-300 pl-5">
+                    <div className="text-lg font-medium tracking-wide font-merriweather text-custom-gray-300 pl-5">
                       <p className="mb-2">call us</p>
                       <p>+1-206-156 2849</p>
                     </div>
@@ -116,7 +116,7 @@ const Footer = () => {
                       <FaMessage />
                     </div>
 
-                    <div className="text-lg font-medium tracking-wide font-source-code-pro text-custom-gray-300 pl-5">
+                    <div className="text-lg font-medium tracking-wide font-merriweather text-custom-gray-300 pl-5">
                       <p className="mb-2">Mail us</p>
                       <p className="lowercase">info@unityrelief.com</p>
                     </div>
@@ -126,7 +126,7 @@ const Footer = () => {
                     <div className="bg-custom-main p-3 text-xl rounded-full">
                       <FaMapLocation />
                     </div>
-                    <div className="text-lg font-medium tracking-wide font-source-code-pro text-custom-gray-300 pl-5">
+                    <div className="text-lg font-medium tracking-wide font-merriweather text-custom-gray-300 pl-5">
                       <p className="mb-2">visit us</p>
                       <p>California 62639</p>
                     </div>

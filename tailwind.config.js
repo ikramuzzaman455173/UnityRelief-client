@@ -69,7 +69,7 @@ export const theme = {
     },
     fontFamily: {
       'Quicksand': ["Quicksand", "sans-serif"],
-      'source-code-pro':["Source Code Pro", "monospace"]
+      'merriweather':["Merriweather", "serif"]
     },
     borderRadius: {
       lg: "var(--radius)",

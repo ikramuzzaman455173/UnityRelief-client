@@ -1,41 +1,7 @@
-// import { Button, ButtonProps } from "../ui/button";
-// import { Link } from "react-router-dom";
-
-// interface CustomButtonProps extends ButtonProps {
-//   icon?: React.ComponentType<object>;
-// }
-
-// const CustomButton: React.FC<CustomButtonProps> = ({
-//   icon: Icon,
-//   className,
-//   children,
-//   ...rest
-// }) => {
-//   return (
-//     <Button
-//       className={`bg-custom-main active:bg-custom-mainDark hover:bg-custom-mainDark rounded transition duration-300 active:scale-105 transform overflow-hidden text-custom-white font-Quicksand dark:font-source-code-pro font-bold tracking-wider ${className}`}
-//       {...rest}
-//     >
-//       {children}
-//       {Icon && (
-//         <span className="pl-2 text-xl">
-//           <Icon />
-//         </span>
-//       )}
-//     </Button>
-//   );
-// };
-
-// export default CustomButton;
-
-// // Usage:
-// {
-//   /* <CustomButton icon={FaDonate}>Donate Now</CustomButton> */
-// }
 
 
-import { Button, ButtonProps } from "../ui/button";
 import { Link } from "react-router-dom";
+import { Button, ButtonProps } from "../ui/button";
 
 interface CustomButtonProps extends ButtonProps {
   icon?: React.ComponentType<object>;
@@ -51,10 +17,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
   if (to) {
     return (
-      <Link to={to} className="inline-block">
+      <Link to={to}>
         {/* Use the Link component with the Button styles */}
         <Button
-          className={`bg-custom-main active:bg-custom-mainDark hover:bg-custom-mainDark rounded transition duration-300 active:scale-105 transform overflow-hidden text-custom-white font-Quicksand dark:font-source-code-pro font-bold tracking-wider ${className}`}
+          className={`bg-custom-main active:bg-custom-mainDark hover:bg-custom-mainDark rounded transition duration-300 active:scale-105 transform overflow-hidden text-custom-white font-Quicksand dark:font-merriweather font-bold tracking-wider ${className}`}
           {...rest}
         >
           {children}
@@ -69,7 +35,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   } else {
     return (
       <Button
-        className={`bg-custom-main active:bg-custom-mainDark hover:bg-custom-mainDark rounded transition duration-300 active:scale-105 transform overflow-hidden text-custom-white font-Quicksand dark:font-source-code-pro font-bold tracking-wider ${className}`}
+        className={`bg-custom-main active:bg-custom-mainDark hover:bg-custom-mainDark rounded transition duration-300 active:scale-105 transform overflow-hidden text-custom-white font-Quicksand dark:font-merriweather font-bold tracking-wider ${className}`}
         {...rest}
       >
         {children}

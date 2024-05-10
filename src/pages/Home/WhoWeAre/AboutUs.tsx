@@ -62,7 +62,7 @@
 
 // export default AboutUs;
 
-import { AiOutlinePlayCircle, AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineCheck, AiOutlinePlayCircle } from "react-icons/ai";
 
 import { useState } from "react";
 
@@ -89,7 +89,7 @@ const AboutUs = () => {
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
               <div>
-                <p className="text-custom-main mb-2 italic text-xl md:text-center font-bold tracking-wide font-source-code-pro">
+                <p className="text-custom-main mb-2 italic text-xl md:text-center font-bold tracking-wide font-merriweather">
                   Who We Are
                 </p>
 
@@ -120,7 +120,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          <div className="relative group border-2 dark:border-custom-white p-1 rounded-md shadow">
+          <div className="relative group border-2 dark:border-custom-white dark:bg-custom-gray-300 p-1 rounded-md shadow">
             <img
               className="bject-cover w-full h-[300px] rounded shadow-lg sm:h-auto cursor-pointer transition-opacity duration-300 ease-in-out group-hover:opacity-75"
               src="https://harity.templatekit.co/wp-content/uploads/sites/49/elementor/thumbs/five-young-multicultural-volunteers-standing-together-smiling-and-looking-at-camera-e1657642113794-pt5ss3wqyoldfm4alxj2rjlmoyv2rqi0l8sqendhgo.jpg"

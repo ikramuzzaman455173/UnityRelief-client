@@ -5,6 +5,8 @@ import Dashboard from "@/pages/Dashboard/Dashboard";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import Login from "@/components/SharedComponents/Login";
 import Register from "@/components/SharedComponents/Register";
+import AllReliefGoods from "@/pages/AllReliefGood/AllReliefGoods";
+import AllReliefGoodDetails from "@/pages/AllReliefGood/AllReliefGoodDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/relief-goods",
+        element: <AllReliefGoods />,
+      },
+      {
+        path: "/relief-goods/:id",
+        element: <AllReliefGoodDetails />,
       },
       {
         path: "/login",

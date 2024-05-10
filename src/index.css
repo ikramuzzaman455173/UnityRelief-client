@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
 
 * {
   padding: 0;
@@ -100,13 +100,20 @@ body,html{
 
 /* ======= navabar style  ======= */
 .nav-li-style-pc{
-  @apply  flex cursor-pointer flex-col font-Quicksand dark:font-source-code-pro font-bold tracking-wider text-[14px] text-custom-gray500 dark:text-custom-white
+  @apply  flex cursor-pointer flex-col font-Quicksand dark:font-merriweather font-bold tracking-wider text-[14px] text-custom-gray500 dark:text-custom-white
 }
 .nav-li-span-style-pc{
   @apply mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full
 }
 .nav-li-style-mobile{
-  @apply cursor-pointer px-6 py-2 text-custom-gray500 dark:text-custom-white hover:bg-sky-600 hover:text-custom-white font-Quicksand dark:font-source-code-pro font-bold tracking-wider
+  @apply cursor-pointer px-6 py-2 text-custom-gray500 dark:text-custom-white hover:bg-sky-600 hover:text-custom-white font-Quicksand dark:font-merriweather font-bold tracking-wider
 }
 /* ======= End navabar style  ======= */
 
+.awesome-btn {
+  @apply bg-gradient-to-r from-purple-600 to-blue-400 text-white font-Quicksand font-semibold tracking-wider transition-all duration-300 ease-in-out;
+}
+
+.awesome-btn:hover {
+  @apply from-pink-600 to-orange-400;
+}

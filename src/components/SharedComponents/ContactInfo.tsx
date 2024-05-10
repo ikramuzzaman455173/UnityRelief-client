@@ -10,7 +10,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ icon, title, description }) =
       <div className="bg-custom-main p-3 text-xl rounded-full relative top-0">
         {icon}
       </div>
-      <div className="text-lg font-medium tracking-wide font-source-code-pro text-custom-gray-300 pl-5">
+      <div className="text-lg font-medium tracking-wide font-merriweather text-custom-gray-300 pl-5">
         <p className="mb-2">{title}</p>
         <p>{description}</p>
       </div>

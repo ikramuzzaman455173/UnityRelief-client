@@ -199,6 +199,7 @@
 // };
 // export default Testimonial;
 
+import DynamicTitle from "@/components/SharedComponents/DynamicTitle";
 import Rating from "@/components/SharedComponents/Rating";
 import { useEffect, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -208,7 +209,6 @@ import Review3LogoImg from "/src/assets/testimonial/review3.jpg";
 import Review4LogoImg from "/src/assets/testimonial/review4.jpg";
 import Review5LogoImg from "/src/assets/testimonial/review5.jpg";
 import Review6LogoImg from "/src/assets/testimonial/review6.jpg";
-import DynamicTitle from "@/components/SharedComponents/DynamicTitle";
 const Testimonial = () => {
   const array = [
     {
@@ -345,7 +345,7 @@ const Testimonial = () => {
                     <Rating initialRating={each?.rating} />
                   </div>
 
-                  <h3 className="text-xl font-medium tracking-wider font-source-code-pro text-custom-gray500 dark:text-custom-white mb-4">
+                  <h3 className="text-xl font-medium tracking-wider font-merriweather text-custom-gray500 dark:text-custom-white mb-4">
                     {each.title}
                   </h3>
 

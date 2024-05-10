@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -26,7 +26,7 @@ const Login = () => {
         <h1 className="md:text-3xl text-xl text-center mb-8 text-custom-gray500 dark:text-custom-white font-[600] tracking-wider">
           Welcome to UnityRelief
         </h1>
-        <p className="text-center text-2xl relative -top-[20px] font-[600] text-custom-main tracking-wide font-source-code-pro">
+        <p className="text-center text-2xl relative -top-[20px] font-[600] text-custom-main tracking-wide font-merriweather">
           Login
         </p>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -92,7 +92,7 @@ const Login = () => {
           </button>
         </form>
         <div className="mt-4">
-          <button className="flex items-center justify-center bg-white border border-gray-300 rounded-lg shadow-md px-4 py-2 w-full text-sm text-custom-gray500 font-source-code-pro font-[600] tracking-wide mb-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+          <button className="flex items-center justify-center bg-white border border-gray-300 rounded-lg shadow-md px-4 py-2 w-full text-sm text-custom-gray500 font-merriweather font-[600] tracking-wide mb-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
             <FcGoogle className="h-6 w-6 mr-2" />
             <span>Continue with Google</span>
           </button>
