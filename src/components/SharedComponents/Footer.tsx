@@ -239,7 +239,7 @@ const Footer = () => {
               <button
                 type="button"
                 id="default-search"
-                className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-full placeholder-customgrtext-custom-white font-Quicksand font-[700] tracking-wider focus:outline-none leading-relaxed transition-all duration-500 "
+                className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-full placeholder-customgrtext-custom-white font-Quicksand font-[700] tracking-wider focus:outline-none leading-relaxed transition-all duration-500 "
               >
                 Have a question? talk to us
               </button>

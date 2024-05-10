@@ -1,4 +1,10 @@
-const ContactInfo = ({ icon, title, description }) => {
+interface ContactInfoProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const ContactInfo: React.FC<ContactInfoProps> = ({ icon, title, description }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="bg-custom-main p-3 text-xl rounded-full relative top-0">
@@ -11,4 +17,5 @@ const ContactInfo = ({ icon, title, description }) => {
     </div>
   );
 };
+
 export default ContactInfo;

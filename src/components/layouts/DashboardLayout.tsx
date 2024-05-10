@@ -57,8 +57,9 @@ const DashboardLayout = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-  const closeSidebar = (e) => {
-    if (!e.target.closest("#sidebar") && !e.target.closest("#open-sidebar")) {
+  const closeSidebar = (e: React.MouseEvent | React.TouchEvent) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest("#sidebar") && !target.closest("#open-sidebar")) {
       setSidebarOpen(false);
     }
   };

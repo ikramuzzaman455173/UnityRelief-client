@@ -12,8 +12,8 @@ const Login = () => {
   } = useForm();
   const [showPassword, setShowPassword] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data); // You can handle form submission here
+  const onSubmit = () => {
+    // console.log(data); // You can handle form submission here
   };
 
   const togglePasswordVisibility = () => {
