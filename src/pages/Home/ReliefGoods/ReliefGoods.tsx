@@ -93,7 +93,7 @@ import { useEffect, useState } from "react";
 import { FaSpinner } from "react-icons/fa"; // Import loading spinner icon
 
 export interface Post {
-  _id: number;
+  _id: string;
   image: string;
   title: string;
   category: string;
@@ -102,10 +102,7 @@ export interface Post {
 }
 
 const ReliefGoods = () => {
-  const {
-    data: reliefGoods,
-    isLoading,
-  } = useGetReliefGoodsQuery("high");
+  const { data: reliefGoods, isLoading } = useGetReliefGoodsQuery("high");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -121,7 +118,6 @@ const ReliefGoods = () => {
     );
   }
 
-
   return (
     <div className="my-20 ">
       {/* ====heading info start===== */}
@@ -131,7 +127,7 @@ const ReliefGoods = () => {
       />
       {/* ====heading info end===== */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {reliefGoods?.slice(0,6)?.map((post: Post) => (
+        {reliefGoods?.slice(0, 6)?.map((post: Post) => (
           <div
             key={post._id}
             className="md:mx-auto max-w-[350px] space-y-4 rounded-md bg-custom-white p-6 shadow md:w-[350px] dark:bg-custom-dark border cursor-pointer mx-4 dark:border-custom-white"

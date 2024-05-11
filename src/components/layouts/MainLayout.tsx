@@ -2,7 +2,8 @@
 import React, { ReactNode } from "react";
 import NavBar from "../SharedComponents/NavBar";
 import Footer from "../SharedComponents/Footer";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 type MainLayoutProps = {
   children: ReactNode;
 };
@@ -15,6 +16,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <footer className="bg-custom-light text-custom-white p-4">
         <Footer />
       </footer>
+      <ToastContainer />
     </div>
   );
 };

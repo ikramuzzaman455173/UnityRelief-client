@@ -27,7 +27,7 @@ const Sidebar = () => {
         <ul>
           <li className="mb-3">
             <Link
-              to=""
+              to="/dashboard/supplies"
               className={`sidebar-link-style ${isActive(
                 "/dashboard/supplies"
               )}`}
