@@ -3,7 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   tagTypes: ["relief-good"],
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000/api" }),
+  // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://unity-relief-server.vercel.app/api" }),
   endpoints: (builder) => ({
     getReliefGoods: builder.query({
       query: (priority) => {

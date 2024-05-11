@@ -66,7 +66,7 @@ const DashboardLayout = () => {
 
   return (
     <>
-      <div className="h-screen flex overflow-hidden">
+      <div className="h-screen flex overflow-auto">
         {/* Sidebar */}
         <div
           className={`absolute bg-custom-light dark:bg-custom-dark text-custom-gray500 border shadow-md dark:text-custom-white w-56 min-h-screen overflow-y-auto transition-transform top-[62px] z-[50] dark:border-0 dark:border-white dark:border-r ${
@@ -80,7 +80,7 @@ const DashboardLayout = () => {
 
         {/* Content */}
         <div
-          className="flex-1 flex flex-col overflow-hidden"
+          className="flex-1 flex flex-col overflow-auto"
           onClick={closeSidebar}
         >
           {/* Navbar */}
@@ -118,11 +118,8 @@ const DashboardLayout = () => {
             </div>
           </div>
           {/* Content Body */}
-          <div className="flex-1 p-4 relative top-20">
-            {/* ====center of the content===== */}
-            <div className="flex w-full h-screen justify-center">
-              <Outlet />
-            </div>
+          <div className="mt-32 mb-16">
+            <Outlet />
           </div>
         </div>
       </div>

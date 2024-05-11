@@ -1,41 +1,48 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+  const location = useLocation();
+  const [activeRoute, setActiveRoute] = useState<string>("");
+
+  useEffect(() => {
+    setActiveRoute(location.pathname);
+  }, [location]);
+
+  type Route = string;
+  const isActive = (route: Route): string => {
+    return route === activeRoute ? "!text-custom-main " : "";
+  };
+
+  // page always show top value when route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <>
       <div className="p-4">
-        <h1 className="text-2xl font-semibold my-5">Sidebar</h1>
+        <h1 className="text-2xl font-semibold my-5 text-center border rounded-md p-2 text-custom-main bg-custom-light shadow-md dark:bg-custom-blackOne border-custom-gray-300 darK:border-white">
+          Admin
+        </h1>
         <ul>
           <li className="mb-3">
             <Link
               to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
+              className={`sidebar-link-style ${isActive(
+                "/dashboard/supplies"
+              )}`}
             >
-              Home
+              supplies
             </Link>
           </li>
           <li className="mb-3">
             <Link
-              to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
+              to="/dashboard/create-supply"
+              className={`sidebar-link-style ${isActive(
+                "/dashboard/create-supply"
+              )}`}
             >
-              About
-            </Link>
-          </li>
-          <li className="mb-3">
-            <Link
-              to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
-            >
-              Services
-            </Link>
-          </li>
-          <li className="mb-3">
-            <Link
-              to=""
-              className="block py-2 px-4 rounded hover:bg-custom-gray500 dark:hover:bg-custom-gray text-custom-gray500 dark:text-custom-gray-300 font-bold tracking-wider font-Quicksand dark:font-merriweather hover:text-custom-white hover:border hover:border-custom-main"
-            >
-              Contact
+              Create Supply
             </Link>
           </li>
         </ul>

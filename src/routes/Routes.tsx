@@ -7,6 +7,7 @@ import Login from "@/components/SharedComponents/Login";
 import Register from "@/components/SharedComponents/Register";
 import AllReliefGoods from "@/pages/AllReliefGood/AllReliefGoods";
 import AllReliefGoodDetails from "@/pages/AllReliefGood/AllReliefGoodDetails";
+import CreateSupply from "@/pages/Dashboard/CreateSupply";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard />,
+      },
+      {
+        path: "create-supply",
+        element: <CreateSupply />,
       },
     ],
   },
