@@ -2,14 +2,29 @@ import PageBanner from "@/components/SharedComponents/PageBanner";
 import BannerImg from "../../assets/gallery/gallery-1.jpg";
 import DynamicTitle from "@/components/SharedComponents/DynamicTitle";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CustomButton from "@/components/SharedComponents/CustomButton";
 // import { FaDonate } from "react-icons/fa";
-import reliefGoodsPosts from "../../../public/Data/ReliefGoodsData";
+import { FaSpinner } from "react-icons/fa";
+import { useGetReliefGoodsQuery } from "@/redux/api/api";
+import { Post } from "../Home/ReliefGoods/ReliefGoods";
 const AllReliefGoods = () => {
+  const { data: reliefGoods, isLoading } = useGetReliefGoodsQuery("high");
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     Aos.init();
+    setLoading(false); // Set loading to false after Aos initialization
   }, []);
+
+  if (isLoading || loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <FaSpinner className="animate-spin text-4xl text-custom-main" />
+      </div>
+    );
+  }
+
   return (
     <div className="my-10">
       <PageBanner heading="All Relief Goods" bgImg={BannerImg} />
@@ -21,9 +36,9 @@ const AllReliefGoods = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
-        {reliefGoodsPosts.map((post) => (
+        {reliefGoods.map((post:Post) => (
           <div
-            key={post.id}
+            key={post._id}
             className="md:mx-auto max-w-[350px] space-y-4 rounded-md bg-custom-white p-6 shadow md:w-[350px] dark:bg-custom-dark border cursor-pointer mx-4 dark:border-custom-white"
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -62,7 +77,7 @@ const AllReliefGoods = () => {
 
             <div>
               <CustomButton
-                to={`/relief-goods/${post.id}`}
+                to={`/relief-goods/${post._id}`}
                 className="!min-w-full dark:font-merriweather font-Quicksand tracking-wider "
               >
                 View Details

@@ -1,4 +1,4 @@
- const reliefGoodsPosts = [
+const reliefGoodsPosts = [
   {
     id: 1,
     image: "https://i.ibb.co/s5CL0t1/cause-1.jpg",
@@ -163,4 +163,4 @@
   },
 ];
 
-export default reliefGoodsPosts
+export default reliefGoodsPosts;
