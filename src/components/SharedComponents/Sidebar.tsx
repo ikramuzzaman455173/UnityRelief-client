@@ -27,6 +27,16 @@ const Sidebar = () => {
         <ul>
           <li className="mb-3">
             <Link
+              to="/dashboard"
+              className={`sidebar-link-style ${isActive(
+                "/dashboard"
+              )}`}
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li className="mb-3">
+            <Link
               to="/dashboard/supplies"
               className={`sidebar-link-style ${isActive(
                 "/dashboard/supplies"

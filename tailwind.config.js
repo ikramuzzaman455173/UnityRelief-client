@@ -64,12 +64,12 @@ export const theme = {
         gray500: "#64748b",
         blackOne: "#1e293b",
         blackTwo: "#0f172a",
-        "gray-300":"#d1d5db"
+        "gray-300": "#d1d5db"
       }
     },
     fontFamily: {
       'Quicksand': ["Quicksand", "sans-serif"],
-      'merriweather':["Merriweather", "serif"]
+      'merriweather': ["Quicksand", "sans-serif"]
     },
     borderRadius: {
       lg: "var(--radius)",

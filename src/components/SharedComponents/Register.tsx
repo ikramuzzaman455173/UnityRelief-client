@@ -20,7 +20,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center mb-24 mt-40">
-      <div className="bg-custom-light dark:bg-custom-dark p-8 rounded-lg shadow w-full border max-w-md md:mx-0 mx-4">
+      <div className="bg-custom-light dark:bg-custom-dark p-8 rounded-lg shadow w-full border dark:border-custom-gray-300 max-w-md md:mx-0 mx-4">
         <h1 className="md:text-3xl text-xl text-center mb-8 text-custom-gray500 dark:text-custom-white font-[600] tracking-wider">
           Welcome to UnityRelief
         </h1>

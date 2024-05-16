@@ -1,43 +1,41 @@
-import { useDeleteReliefGoodMutation, useGetReliefGoodsQuery } from "@/redux/api/api";
+import {
+  useDeleteReliefGoodMutation,
+  useGetReliefGoodsQuery,
+} from "@/redux/api/api";
 import { Post } from "../Home/ReliefGoods/ReliefGoods";
 import { FaEdit, FaSpinner, FaTrashAlt } from "react-icons/fa";
 import { useState } from "react";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import CustomButton from "@/components/SharedComponents/CustomButton";
 
 const AllSupplies = () => {
   const { data: reliefGoods, isLoading } = useGetReliefGoodsQuery("high");
   const [openModal, setOpenModal] = useState(false);
   const [deleteItemId, setDeleteItemId] = useState<string>("");
 
+  const [deleteReliefGoodMutation] = useDeleteReliefGoodMutation();
   const handleDelete = async (id: string) => {
     try {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const { data } = useDeleteReliefGoodMutation({ id }); // Assuming useDeleteReliefGoodMutation returns a promise
-      if (data && data.success) {
-        console.log("Deleted supply with id:", id);
-        // Call the query hook to refetch the updated data
-        useGetReliefGoodsQuery();
-        // Show success toast message
-        toast("Supply deleted successfully");
+      const result = await deleteReliefGoodMutation({ id });
+
+      if ("error" in result) {
+        // Handle error case
+        console.error("Failed to delete relief good:", result.error);
+        toast.error("Failed to delete relief good");
       } else {
-        // Handle cases where data.success is false
-        console.error("Failed to delete supply:", data?.error);
-        // Show error toast message
-        toast.error("Failed to delete supply");
+        // Handle success case
+        // console.log({ result });
+        // console.log("Deleted relief good with id:", id);
+        toast(result?.data?.message);
       }
-    } catch (error) {
-      // Handle network errors or unexpected errors
-      console.error("Failed to delete supply:", error.message);
-      // Show error toast message
-      toast.error("Failed to delete supply");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("Failed to delete relief good:", error.message);
+        toast.error("Failed to delete relief good");
+      }
     }
-  };
-
-
-  const handleEdit = (id:string) => {
-    // Implement edit logic here
-    console.log("Editing supply with id:", id);
   };
 
   if (isLoading) {
@@ -52,76 +50,97 @@ const AllSupplies = () => {
     <>
       <div className="p-4 text-center">
         <div className="text-3xl w-full border-custom-main shadow-md font-Quicksand inline p-2 rounded-md text-custom-gray500 dark:text-custom-white border font-[600] tracking-wider">
-          Supplies All Posts
+          Total Supplies Post Crate:{" "}
+          <span className="text-custom-main">{reliefGoods?.length || 0}</span>
         </div>
       </div>
-      <div className="px-3 py-4 flex justify-center items-center">
-        <table className="max-w-[900px] w-full md:mx-0 mx-5 text-md border dark:border-white bg-custom-light text-custom-gray500 dark:text-custom-white dark:bg-custom-dark shadow-md  rounded mb-4 overflow-scroll">
-          <thead>
-            <tr className="border-b">
-              <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                Title
-              </th>
-              <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                Category
-              </th>
-              <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                Amount
-              </th>
-              <th className="text-center p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                Actions
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {reliefGoods?.map((supply: Post) => (
-              <tr
-                key={supply._id}
-                className="border-b hover:bg-orange-100 dark:hover:bg-custom-blackOne"
-              >
-                <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                  {supply.title}
-                </td>
-                <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                  {supply.category}
-                </td>
-                <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
-                  $ {supply.amount}
-                </td>
-                <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white flex justify-end">
-                  <button
-                    type="button"
-                    className="mr-3 text-sm bg-custom-main transition duration-300 overflow-hidden active:scale-75 transform text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => handleEdit(supply._id)}
-                  >
-                    <p className="flex items-center justify-center gap-2 text-lg tracking-wide font-Quicksand font-medium">
-                      Edit{" "}
-                      <span>
-                        <FaEdit />
-                      </span>
-                    </p>
-                  </button>
-                  <button
-                    type="button"
-                    className="mr-3 text-sm bg-custom-red transition duration-300 overflow-hidden active:scale-75 transform text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline "
-                    onClick={() => {
-                      setDeleteItemId(supply?._id);
-                      setOpenModal(true);
-                    }}
-                  >
-                    <p className="flex items-center justify-center gap-2 text-lg tracking-wide font-Quicksand font-medium">
-                      Delete{" "}
-                      <span>
-                        <FaTrashAlt />
-                      </span>
-                    </p>
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="w-full text-center">
+        <CustomButton className="my-5" to="/dashboard/create-supply">
+          Click To Redirect Create Supply Page
+        </CustomButton>
       </div>
+
+      <div className="p-5 flex flex-col justify-center items-center">
+        <div className="max-w-[900px] w-full md:mx-0 mx-5 text-md border dark:border-white bg-custom-light text-custom-gray500 dark:text-custom-white dark:bg-custom-dark shadow-md rounded mb-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 scrollbar-w-[5px]">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b">
+                <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                  Sl
+                </th>
+                <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                  Title
+                </th>
+                <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                  Category
+                </th>
+                <th className="text-left p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                  Amount
+                </th>
+                <th className="text-center p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {reliefGoods?.map((supply: Post, index: number) => (
+                <tr
+                  key={supply._id}
+                  className="border-b hover:bg-orange-100 dark:hover:bg-custom-blackOne"
+                >
+                  <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                    {index + 1}
+                  </td>
+                  <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                    {supply.title}
+                  </td>
+                  <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                    {supply.category}
+                  </td>
+                  <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white">
+                    $ {supply.amount}
+                  </td>
+                  <td className="p-3 px-5 text-custom-gray500 dark:text-custom-white flex justify-end">
+                    <Link
+                      to={`/dashboard/update-supply/${supply?._id}`}
+                      type="button"
+                      className="mr-3 text-sm bg-custom-main transition duration-300 overflow-hidden active:scale-75 transform text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                      // onClick={() => handleEdit(supply._id)}
+                    >
+                      <p className="flex items-center justify-center gap-2 text-lg p-2 tracking-wide font-merriweather font-medium">
+
+                        <span>
+                          <FaEdit />
+                        </span>
+                      </p>
+                    </Link>
+                    <button
+                      type="button"
+                      className="mr-3 text-sm bg-custom-red transition duration-300 overflow-hidden active:scale-75 transform text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline "
+                      onClick={() => {
+                        setDeleteItemId(supply?._id);
+                        setOpenModal(true);
+                      }}
+                    >
+                      <p className="flex items-center justify-center gap-2 text-lg p-2 tracking-wide font-merriweather font-medium">
+
+                        <span>
+                          <FaTrashAlt />
+                        </span>
+                      </p>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
 
       {/* Custom delete confirm modal */}
       <div className="mx-auto w-fit">
@@ -155,7 +174,10 @@ const AllSupplies = () => {
 
             <div className="flex justify-between">
               <button
-                onClick={() => handleDelete(deleteItemId)}
+                onClick={() => {
+                  setOpenModal(false);
+                  handleDelete(deleteItemId);
+                }}
                 className="me-2 rounded-md bg-custom-main hover:bg-custom-mainDark px-6 py-[6px] text-white transition duration-300 overflow-hidden active:scale-75 transform "
               >
                 Delete
@@ -169,6 +191,8 @@ const AllSupplies = () => {
             </div>
           </div>
         </div>
+
+        {/* update form modal */}
       </div>
     </>
   );

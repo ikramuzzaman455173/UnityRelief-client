@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   tagTypes: ["relief-good"],
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000/api" }),
-  // baseQuery: fetchBaseQuery({ baseUrl: "https://unity-relief-server.vercel.app/api" }),
+  // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://unity-relief-server.vercel.app/api" }),
   endpoints: (builder) => ({
     getReliefGoods: builder.query({
       query: (priority) => {
@@ -32,7 +32,7 @@ export const baseApi = createApi({
 
     updateReliefGood: builder.mutation({
       query: (options) => ({
-        url: `/relief-good/${options.id}`,
+        url: `/relief-goods/${options.id}`,
         method: "PUT",
         body: options.reliefGood, // corrected
       }),
@@ -41,7 +41,7 @@ export const baseApi = createApi({
 
     deleteReliefGood: builder.mutation({
       query: ({ id }) => ({
-        url: `/relief-good/${id}`,
+        url: `/relief-goods/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["relief-good"],

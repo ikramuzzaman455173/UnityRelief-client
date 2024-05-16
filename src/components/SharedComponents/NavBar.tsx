@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react";
-import { MdClose, MdLogin, MdLogout, MdMenu } from "react-icons/md";
+import { MdClose, MdLogin, MdMenu } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
@@ -76,12 +76,12 @@ const NavBar: React.FC = () => {
           </Link>
         </li>
 
-        <li className="nav-li-style-pc">
+        {/* <li className="nav-li-style-pc">
           <button className="relative overflow-hidden rounded-md bg-custom-red text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center">
             <MdLogout />
             <span className="pl-2 font-bold tracking-wider">Logout</span>
           </button>
-        </li>
+        </li> */}
 
         <ThemeToggle />
       </ul>
@@ -128,13 +128,13 @@ const NavBar: React.FC = () => {
             </li>
 
             <li className="nav-li-style-mobile hover:bg-transparent">
-              <button
+              {/* <button
                 onClick={(e) => e.stopPropagation()}
                 className="relative overflow-hidden rounded-md bg-custom-red text-custom-white py-2 px-5 transition duration-300 active:scale-105 transform flex items-center"
               >
                 <MdLogout />
                 <span className="pl-2 font-bold tracking-wider ">Logout</span>
-              </button>
+              </button> */}
               <div className="my-4" onClick={(e) => e.stopPropagation()}>
                 <ThemeToggle />
               </div>

@@ -9,6 +9,7 @@ import AllReliefGoods from "@/pages/AllReliefGood/AllReliefGoods";
 import AllReliefGoodDetails from "@/pages/AllReliefGood/AllReliefGoodDetails";
 import CreateSupply from "@/pages/Dashboard/CreateSupply";
 import AllSupplies from "@/pages/Dashboard/AllSupplies";
+import UpdateSupply from "@/pages/Dashboard/UpdateSupply";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "create-supply",
         element: <CreateSupply />,
+      },
+      {
+        path: "update-supply/:id",
+        element: <UpdateSupply />,
       },
       {
         path: "supplies",
