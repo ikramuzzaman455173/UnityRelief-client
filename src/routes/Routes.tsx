@@ -10,6 +10,7 @@ import AllReliefGoodDetails from "@/pages/AllReliefGood/AllReliefGoodDetails";
 import CreateSupply from "@/pages/Dashboard/CreateSupply";
 import AllSupplies from "@/pages/Dashboard/AllSupplies";
 import UpdateSupply from "@/pages/Dashboard/UpdateSupply";
+import ErrorPage from "@/components/SharedComponents/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         <Outlet />
       </MainLayout>
     ),
-    errorElement: "404 error found!",
+    errorElement:<ErrorPage/>,
     children: [
       {
         path: "/",
