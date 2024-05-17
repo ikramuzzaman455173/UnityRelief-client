@@ -24,11 +24,12 @@ const AllReliefGoodDetails = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center">
             <img
               alt="named"
-              className="lg:w-1/2 w-full object-cover object-center rounded border p-1 shadow-md dark:bg-custom-gray-300 transform transition duration-300 hover:scale-110 cursor-zoom-in mb-6 lg:mb-0"
+              className="lg:w-1/2 w-full object-cover rounded border p-1 shadow-md dark:bg-custom-gray-300 transform transition duration-300 hover:scale-90 cursor-zoom-in mb-6 lg:mb-0"
               src={reliefGoodData?.image}
             />
+
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6">
-              <h2 className="text-sm title-font text-custom-gray500 dark:text-custom-gray-300 tracking-widest my-2">
+              <h2 className="text-[17px] font-[600] title-font text-custom-gray500 dark:text-custom-gray-300 tracking-widest my-2">
                 Unity Relief work
               </h2>
               <h1 className="text-custom-gray500 dark:text-custom-white text-3xl title-font font-medium mb-1">
@@ -43,8 +44,7 @@ const AllReliefGoodDetails = () => {
                     strokeLinejoin="round"
                     strokeWidth="2"
                     className="w-4 h-4 text-red-500"
-                    viewBox="0 0 24 24"
-                  >
+                    viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <span className="text-custom-gray500 dark:text-custom-white ml-3">
@@ -78,4 +78,3 @@ const AllReliefGoodDetails = () => {
 };
 
 export default AllReliefGoodDetails;
-
